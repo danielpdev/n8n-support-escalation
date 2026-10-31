@@ -1,0 +1,120 @@
+{
+  "n8n_version": "2.45.7",
+  "image_digest": "sha256:9a8d8dcea75667496695d7810d7e1fe018a65efb36cc499d347f3931b3957b5d",
+  "status": "success",
+  "started_at": "2026-10-31T13:43:59.653Z",
+  "stopped_at": "2026-10-31T13:43:59.778Z",
+  "nodes": {
+    "Run demo": [
+      {
+        "status": "success",
+        "duration_ms": 1,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {},
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "Classify synthetic ticket": [
+      {
+        "status": "success",
+        "duration_ms": 84,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {
+                  "id": "DEMO-1",
+                  "text": "Production down: checkout outage",
+                  "route": "urgent",
+                  "deadline": 1793457839.735846
+                },
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "Urgent ticket?": [
+      {
+        "status": "success",
+        "duration_ms": 14,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {
+                  "id": "DEMO-1",
+                  "text": "Production down: checkout outage",
+                  "route": "urgent",
+                  "deadline": 1793457839.735846
+                },
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ],
+            []
+          ]
+        }
+      }
+    ],
+    "Notify local on-call inbox": [
+      {
+        "status": "success",
+        "duration_ms": 16,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {
+                  "duplicate": false
+                },
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "Inspect local inbox": [
+      {
+        "status": "success",
+        "duration_ms": 2,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {
+                  "ticket": {
+                    "id": "DEMO-1",
+                    "text": "Production down: checkout outage",
+                    "route": "urgent",
+                    "deadline": 1793457839.735846
+                  },
+                  "channel": "on-call"
+                },
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

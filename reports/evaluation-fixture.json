@@ -1,0 +1,39 @@
+{
+  "mode": "fixture",
+  "python": "3.12.13",
+  "recorded_at": "2026-10-31T13:50:41.818746+00:00",
+  "elapsed_seconds": 0.0115,
+  "result": {
+    "passed": true,
+    "scenario": {
+      "ticket": {
+        "id": "DEMO-1",
+        "text": "Production down: checkout outage",
+        "route": "urgent",
+        "deadline": 3700
+      },
+      "retry": {
+        "duplicate": true
+      },
+      "inbox": [
+        {
+          "ticket": {
+            "id": "DEMO-1",
+            "text": "Production down: checkout outage",
+            "route": "urgent",
+            "deadline": 3700.0
+          },
+          "channel": "on-call"
+        }
+      ],
+      "overdue": [
+        {
+          "id": "DEMO-1",
+          "text": "Production down: checkout outage",
+          "route": "urgent",
+          "deadline": 3700.0
+        }
+      ]
+    }
+  }
+}
