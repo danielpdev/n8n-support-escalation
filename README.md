@@ -6,6 +6,12 @@ Ticket routing, SLA deadlines and deduplicated local notifications.
 
 **Role focus:** n8n / Support Automation. **Status:** working local portfolio implementation, with synthetic data.
 
+## Demo
+
+![How n8n Support Escalation works](docs/demo.gif)
+
+Edited replay of captured CLI outputs in deterministic fixture mode. This is not live model inference. [Full recording](docs/demo.mp4). Rebuild with `./scripts/render_gif.sh` (FFmpeg required).
+
 ## The engineering decision
 
 A deterministic classifier assigns route and SLA deadline. The workflow branches to on-call or support. A unique ticket/channel key prevents repeated delivery to the local inbox.
